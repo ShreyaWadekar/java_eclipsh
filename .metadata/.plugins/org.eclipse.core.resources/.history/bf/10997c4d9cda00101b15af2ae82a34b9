@@ -1,0 +1,35 @@
+package recording;
+
+interface A
+{
+	int id=101;
+}
+
+interface B
+{
+	String name="Shreya";
+}
+
+interface C
+{
+	String color="White";
+}
+
+class D implements A,B,C
+{
+	String city="Surat";
+	
+	void display();
+	{
+		System.out.println("Id : "+id+" Name : "+name+" Color : "+color+" city : "+city);
+	}
+}
+
+public class Interface {
+
+	public static void main(String[] args) {
+		D d= new D();
+		d.display();
+	}
+
+}

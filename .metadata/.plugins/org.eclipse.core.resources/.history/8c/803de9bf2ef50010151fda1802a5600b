@@ -1,0 +1,21 @@
+package FileHandling;
+
+import java.io.FileOutputStream;
+
+public class FileOutputStreamTest {
+
+	public static void main(String[] args) 
+	{
+		try {
+			
+			FileOutputStream fs= new FileOutputStream("C:\\File Date\\test.text");
+			
+			fs.write(65);
+			fs.close();
+		} catch (Exception e)
+		{
+			
+		}
+	}
+
+}

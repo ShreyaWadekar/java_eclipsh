@@ -1,0 +1,26 @@
+package ExceptionHandling;
+
+public class MultipleCatchBlock {
+
+	public static void main(String[] args) {
+	System.out.println("Welcome to exception");
+	try {
+		int a[]= new int[4];
+		a[5]=20/10;
+		
+	} 
+	catch (ArithmeticException e) {
+		System.out.println("zero not divisible to any number");
+		System.out.println(e);
+	}
+	catch (ArrayIndexOutOfBoundsException e) {
+		System.out.println("String not found");
+		System.out.println(e);
+	}
+	catch (Exception e) {
+		System.out.println(e);
+	}
+
+	}
+
+}

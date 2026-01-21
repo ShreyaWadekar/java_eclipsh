@@ -1,0 +1,62 @@
+package ThreadDemo;
+
+class NoTest
+{
+	synchronized void waitingMethod()
+	{
+		System.out.println(Thread.currentThread().getName() +" is waiting");
+		
+		try {
+			wait();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		System.out.println(Thread.currentThread().getName() +" resume");
+	}
+	
+	synchronized void notifyMethod()
+	{
+		System.out.println("Notify all method");
+		notifyAll();
+		
+	}
+}
+
+class MyThreadDemo extends Thread
+{
+	NoTest t;
+	public MyThreadDemo(NoTest t) {
+		this.t=t;
+	}
+	
+	public  void run()
+	{
+		t.waitingMethod();
+	}
+	
+}
+
+public class TestNotifyAll {
+
+	public static void main(String[] args) {
+		NoTest obj= new NoTest();
+		MyThreadDemo t1= new MyThreadDemo(obj);
+		MyThreadDemo t2= new MyThreadDemo(obj);
+		
+		t1.setName("thread - 1");
+		t2.setName("thread - 2");
+		
+		t1.start();
+		t2.start();
+		
+		try {
+			Thread.sleep(1000);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		obj.notifyMethod();
+	}
+
+}

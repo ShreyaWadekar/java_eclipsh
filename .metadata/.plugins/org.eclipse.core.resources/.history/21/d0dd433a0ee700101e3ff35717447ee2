@@ -1,0 +1,11 @@
+package ExceptionHandling;
+
+public class StringIndex {
+
+	public static void main(String[] args) {
+		String a = "Java";
+		System.out.println("Print the character :  "+a.charAt(5));
+
+	}
+
+}

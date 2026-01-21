@@ -1,0 +1,26 @@
+package FileHandling;
+
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+
+public class DataOutputStreamDemo {
+
+	public static void main(String[] args) {
+		try 
+		{
+			FileOutputStream fout = new FileOutputStream("C:\\File Date\\test.txt");
+			
+			DataOutputStream dout= new DataOutputStream(fout);
+			
+			dout.writeInt(65);
+			dout.flush();
+			dout.close();
+		} 
+		catch (Exception e)
+		{
+			System.out.println(e);
+		}
+
+	}
+
+}

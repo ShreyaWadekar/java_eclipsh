@@ -1,0 +1,30 @@
+package FileHandling;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+
+
+public class BufferInputStreamDemo {
+
+	public static void main(String[] args) 
+	{
+	
+		try 
+		{
+			FileInputStream fis= new FileInputStream("C:\\File Date\\test.txt");
+			
+			BufferedInputStream bis= new BufferedInputStream(fis);
+			
+			int i;
+			while((=bis.read()) !=-1)
+			{
+				
+			}
+			
+		} catch (Exception e) 
+		{
+			
+		}
+	}
+
+}

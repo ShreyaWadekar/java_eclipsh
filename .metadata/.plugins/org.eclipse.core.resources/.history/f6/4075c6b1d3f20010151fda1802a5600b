@@ -1,0 +1,10 @@
+package ThreadDemo;
+
+public class TestNotifyAll {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

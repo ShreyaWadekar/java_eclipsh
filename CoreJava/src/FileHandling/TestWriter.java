@@ -1,0 +1,29 @@
+package FileHandling;
+
+import java.io.FileWriter;
+import java.io.Writer;
+
+public class TestWriter {
+
+	public static void main(String[] args) {
+		try
+		{
+			Writer w= new FileWriter("output.txt");
+			
+			String content = "I Like travaling \n";
+			
+			w.write(content);
+			w.append("I like to travaling in india");
+			w.close();
+			
+			System.out.println("Its Word successfully...");
+		}
+		catch (Exception e) 
+		{
+			System.out.println(e);
+		}
+		
+
+	}
+
+}

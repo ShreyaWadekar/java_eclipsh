@@ -1,0 +1,11 @@
+package ExceptionHandling;
+
+public class NumberFormate {
+
+	public static void main(String[] args) {
+		String s= "shreya";
+		int  num = Integer.parseInt(s);
+
+	}
+
+}

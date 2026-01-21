@@ -1,0 +1,34 @@
+package ThreadDemo;
+
+class Customer
+{
+	int amount = 10000;
+	
+	synchronized void withdraw(int amount)
+	{
+		System.out.println("Going to withdraw...");
+		
+		if(this.amount<amount)
+		{
+			System.out.println("Less Balance, waiting for deposite...");
+			
+			try {
+				wait();
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+		}
+		
+		this.amount-= amount;
+		System.out.println("withdraw completed...");
+	}
+}
+
+public class DemoInterCommunication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

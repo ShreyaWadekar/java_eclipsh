@@ -1,0 +1,23 @@
+package FileHandling;
+
+public class TestIO {
+
+	public static void main(String[] args) {
+		System.out.println("Test output stream");
+		
+		System.err.println("Test error system");
+		
+		try {
+			int i = System.in.read(65);
+
+			System.out.println((char)i);
+		} catch (Exception e) {
+
+			System.out.println(e);
+		}
+	
+		
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package FileHandling;
+
+import java.io.FileOutputStream;
+
+public class BufferedOutputStreamDemo {
+
+	public static void main(String[] args) 
+	{
+		try {
+			FileOutputStream fout= new FileOutputStream("C:\\File Date\\test.txt");
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+	}
+
+}

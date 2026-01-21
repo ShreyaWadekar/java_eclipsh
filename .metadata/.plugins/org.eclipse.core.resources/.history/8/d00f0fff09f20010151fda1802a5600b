@@ -1,0 +1,54 @@
+package ThreadDemo;
+
+class table   //Non synchronization
+{
+	synchronized public void printTable(int num)
+	{
+		for(int i=1;i<=5;i++)
+		{
+			System.out.println(num*i);
+			
+		   try {
+			   Thread.sleep(500);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		}
+	}
+}
+
+class MyThread1 extends Thread
+{
+	table t;
+	public  MyThread1(table t)
+	{
+		this.t=t;
+	}
+	public void run()
+	{
+		t.printTable(5);
+	}
+}
+
+class MyThread2 extends Thread
+{
+	table t;
+	public  MyThread2(table t)
+	{
+		this.t=t;
+	}
+	public void run()
+	{
+		t.printTable(100);
+	}
+}
+public class TestSynchronizationBlock {
+
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

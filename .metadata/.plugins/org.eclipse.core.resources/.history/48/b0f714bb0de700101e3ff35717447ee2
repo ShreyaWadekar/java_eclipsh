@@ -1,0 +1,10 @@
+package ExceptionHandling;
+
+public class ArrayIndex {
+
+	public static void main(String[] args) {
+		int a[]= {12, 34,56,78};
+		System.out.println(a[6]);
+
+}
+}
